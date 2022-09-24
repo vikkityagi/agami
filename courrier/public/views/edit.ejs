@@ -1,0 +1,36 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form method="post" action="/updateproduct/<%= user._id %>">
+            <label><b>Item Name:</b></label><br>
+            <input type="text" name="item_name" value="<%= user.item_name %>" ><br>
+            <label><b>Shipped by</b></label><br>
+            <input type="text" name="shipped_by" value="<%= user.shipped_by %>"><br>
+            <label><b>Mobile</b></label><br>
+            <input type="text" name="mobileno" value="<%= user.mobileno %>"><br>
+            <label><b>Address</b></label><br>
+            <input type="text" name="address"value = "<%= user.address %>"><br>
+            <label><b>Photo</b></label><br>
+            <input type="file" name="photo" value="<%= user.photo %>"><br>
+            <label><b>Distance</b></label><br>
+            <input id="dis" type="number" name="distance" value="<%= user.distance %>"><br>
+            <label><b>Weight</b></label><br>
+            <input id="wei" type="number" name="weight" value="<%= user.weight %>"><br>
+            <label><b>Price</b></label><br>
+            <input id = "pr" type="text" name="price" value="150" value="<%= user.price %>"><br>
+
+            <input type="submit" value="Submit"> 
+        </form>
+        <button onClick="func()">Calculate</button>
+        <script>
+            function func(){
+                var w=document.getElementById('wei').value;
+                var d = document.getElementById('dis').value;
+                document.getElementById('pr').value = 150 + 35*d+5*(w*1000);
+            }
+            
+        </script>
+    </body>
+</html>

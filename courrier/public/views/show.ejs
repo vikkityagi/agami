@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    </head>
+    <body>
+        <table class="table table-border table-bordered text-center shadow">
+            <thead>
+                <tr>
+                    <th>Item Id</th>
+                    <th>Item Name</th>
+                    <th>Shipped by</th>
+                    <th>Mobile No</th>
+                    <th>Address</th>
+                    <th>TO Address</th>
+                    <th>Photo</th>
+                    <th>Distance</th>
+                    <th>Weight</th>
+                    <th>Price</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(function(user){ %>
+                <tr>
+                    <td><%= user.item_id %></td>
+                    <td><%= user.item_name %></td>
+                    <td><%= user.shipped_by %></td>
+                    <td><%= user.mobileno %></td>
+                    <td><%= user.address %></td>
+                    <td><%= user.toaddress %></td>
+                    <td><a href="<%= user.photo %>"><%= user.photo %></a></td>
+                    <td><%= user.distance %></td>
+                    <td><%= user.weight %></td>
+                    <td><%= user.price %></td>
+                    <td><%= user.deleiverdate %></td>
+                    <td><a href="/edit/<%= user._id %>" class="btn btn-success">Edit</a></td>
+                    <td><a href="/delete/<%= user._id %>" class="btn btn-success">Delete</a></td>
+                </tr>
+                <% }) %>
+            </tbody>
+
+        </table>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    </body>
+</html>
