@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+    </head>
+    <body>
+        <div class="container">
+            <form method="post" action="/orgedit/<%= edits._id %>" >
+                <div class="form-group">
+                    <label><b>Id:</b></label>
+                    <input type="number" name="id"  value="<%= edits.id %>" class="form-control">
+                    <label><b>Name:</b></label>
+                    <input type="text" name="name" value="<%= edits.name %>" class="form-control">
+                    <label><b>Email:</b></label>
+                    <input type="email" name="email" value="<%= edits.email %>" class="form-control">
+                    <label><b>Photo:</b></label>
+                    <input type="file" name="photo" value="<%= edits.photo %>" class="form-control">
+                    <label><b>Fee:</b></label>
+                    <input type="number" name="fee" value="<%= edits.fee %>" class="form-control">
+                    <label><b>Date and Time:</b></label>
+                    <input type="datetime-local" name="datetime" value="<%= edits.datetime %>" class="form-control"><br>
+                    <input type="submit" value="Done" class="btn btn-success">
+                    <!-- <button type="submit" class="btn btn-danger">Done</button> -->
+                </div>
+            </form>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    </body>
+</html>
